@@ -1,0 +1,8 @@
+<h1>People</h1>
+<% @person.each do |person| %>
+<%= link_to "#{person.name}", person %>
+<%= link_to "edit", edit_person_path(person) %>
+<%= link_to "Destroy", person, method: :delete, data: { confirm: "Are you sure" } %>
+<% end %>
+
+<%= link_to 'Make new person', new_person_path %>

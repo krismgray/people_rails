@@ -1,0 +1,36 @@
+<h1>Please fill out the following</h1>
+<%= form_for @person do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, id: :person_name, required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.text_field :age, id: :person_age, requried: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hair_color %>
+    <%= f.text_field :hair_color, id: :person_hair_color, required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :eye_color %>
+    <%= f.text_field :eye_color, id: :person_eye_color %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.text_field :gender, id: :person_gender %>
+  </div>
+
+  <div class="ui checkbox">
+    <input type="checkbox" name="example">
+    <label>Alive</label>
+  </div>
+
+  <div class="actions">
+    <%= f.submit nil, class: "ui button primary" %>
+  </div>
+<% end %>
