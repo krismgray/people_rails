@@ -1,2 +1,49 @@
-<h1>People#show</h1>
-<p>Find me in app/views/people/show.html.erb</p>
+<p id="notice" class=<%= notice ? 'success' : ''%>><%= notice %></p>
+
+<table class="striped">
+  <tbody>
+  <tr>
+    <td>
+      <strong>name:</strong>
+      <%= @person.name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>age:</strong>
+      <%= @person.age %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>hair_color:</strong>
+      <%= @person.hair_color %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <strong>eye_color:</strong>
+    <%= @person.eye_color %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <strong>gender:</strong>
+    <%= @person.gender %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <strong>alive:</strong>
+    <%= @person.alive %>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<div class="ui basic button">
+  <%= link_to 'Edit', edit_person_path(@person) %>
+</div>
+<div class="ui basic button">
+  <%= link_to 'Back', people_path %>
+</div>
